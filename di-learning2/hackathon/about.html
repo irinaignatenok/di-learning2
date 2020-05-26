@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<style type="text/css">
+	body {
+	background-image: url(https://images.unsplash.com/flagged/photo-1556746834-cbb4a38ee593?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80);
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+	.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+text-align: center;
+position: sticky;
+}
+#columns {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+	.column {
+  height: 200px;
+  width: 200px;
+  float: left;
+  border: 2px solid #666666;
+  background-color: #ccc;
+  margin-right: 5px;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 3px #000;
+  -ms-box-shadow: inset 0 0 3px #000;
+  box-shadow: inset 0 0 3px #000;
+  text-align: center;
+  cursor: move;
+  padding-top: 50px;
+}
+
+
+
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-light bg-light">
+	  <a class="navbar-brand" href="#" style="text-align: center">
+	  	<h2>YOUR FIRST MARATHON</h2>
+	  </a>
+	</nav>
+
+	<div id="columns">
+  <div class="column" id="square1" draggable="true"><h2>5<br> kilometers</h2></div>
+  <div class="column" id="square2" draggable="true"><h2>10<br>kilometers</h2></div>
+  <div class="column" id="square3" draggable="true"><h2>15<br> kilometers</h2></div>
+  
+ 
+</div>
+<div id="columns">
+	<div class="column" id="square4"><h1>My distance</h1></div>
+</div>
+
+
+
+
+<script type="text/javascript"src="script2.js">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>	
+</script>
+</body>
+</html>
