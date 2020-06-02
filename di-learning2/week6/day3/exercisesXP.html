@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+let amount;
+
+
+// Exercise 2
+// 1. Write a JavaScript program to display the colors in the following way : “1# choice is Blue .” “2# choice is Green.” “3# choice is Red.”
+
+
+color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "]
+
+color.forEach ((item, i) => {
+	console.log(i + 1 +"#" + " choice is " + item.);
+})
+
+// Exercise 3
+ 
+ let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "]; 
+ let ordinal = ["th","st","nd","rd"]
+ 
+ // let ordinal1 = ordinal.shift();
+
+ // let keyword = "Red";
+
+ color.forEach(function(title,index,arr) {
+ 	let ordinal = ["th","st","nd","rd"]
+ 	let ordinal1 = ordinal.split(" ");
+
+ 	let i = 1;
+ 	for (i = 1; i < ordinal.length; i++);
+ 		let pos = ordinal.join();
+ 		let pos1 = pos.split(" ")
+
+ 	return console.log(index + 1, pos, title)
+  })
+ // didn't succed in exercise 3
+// Exercise 4
+// part 1
+const is_string = (input) => {
+	for(let i=0; i < input.length; i++)
+	return(typeof input[i] == "string" ? true : false)
+}
+console.log(is_string("hello"))
+// true
+// part 2
+const is_string = (input) => {
+	for(let i=0; i < input.length; i++)
+	return(typeof input[i] == "string" ? true : false)
+}
+console.log(is_string([1, 2, 4, 0]))
+// false
+
+</script>
+</body>
+</html>

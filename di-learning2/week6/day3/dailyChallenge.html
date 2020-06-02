@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+let groceries = {
+    fruits : ["pear", "apple", "banana"],
+    vegetables: ["tomatoes", "cucumber", "salad"],
+    totalPrice : "20$",
+    other : {
+        payed : true,
+        meansOfPayment : ["cash", "creditCard"]
+    }
+}
+
+let myGroceries = groceries;
+
+// Change totalPrice by 35$. Does this key was also modified in the copied object ?
+
+groceries.totalPrice = "35$"; // the copied object has been modified too
+
+// 3. Change payed by false. Does this key was also modified in the copied object ? Why ?
+groceries.other.payed = false; /*the copied object has been modified too, because they passed by the same reference */
+
+// but if 
+let newGroceries = {
+    fruits : ["pear", "apple", "banana"],
+    vegetables: ["tomatoes", "cucumber", "salad"],
+    totalPrice : "20$",
+    other : {
+        payed : true,
+        meansOfPayment : ["cash", "creditCard"]
+    }
+}
+
+groceries.totalPrice = "35$"; /* the copied object won't be modified.*/
+groceries.other.payed = false;/* the copied object won't be modified. Because these two objects contains the same properties but live a separate life. 
+
+
+</script>
+</body>
+</html>

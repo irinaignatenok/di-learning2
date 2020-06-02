@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	// <!-- Create a one line function that adds adds two parameters
+const add = (a, b) => a+b
+
+// What does the last line return?
+const addTo = x => y => x + y;
+var addToTen = addTo(10);
+addToTen(3);/* the value of argument y. We're calling outside function(10)(3)*/
+
+// Exercise 3 What does the last line return?
+const sum = (a, b) => a + b
+const curriedSum = (a) => (b) => a + b
+curriedSum(30)(1) /* function invocations: curriedSum is invoked with 30, a fixed to 30, and then we invoke the returned function by passing 1, which completes the application and returns 31*/
+
+// Exercise 4
+// What does the last line return?
+const sum = (a, b) => a + b
+const curriedSum = (a) => (b) => a + b
+const add5 = curriedSum(5)
+add5(12)/*we invoke the returned function by passing 12, which completes the application and returns 17*/
+
+// Exercise 5
+// What does the last line return?
+
+const compose = (f, g) => (a) => f(g(a));
+const add1 = (num) => num + 1;
+const add5 = (num) => num + 5;
+compose(add1, add5)(10)
+// 16 invoke the function by arguments
+
+
+</script>
+</body>
+</html>
