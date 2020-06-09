@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="exercise1W8D1.html" method="GET" onsubmit="myForm()">
+	
+	<p>
+	<label for="name">Name</label><br>
+	<input type="text" name="name" value="" id="name" style="width: 200px">
+</p>
+	<p>
+	<label for="comments">Comments</label><br>
+	<input type="text" name="comments" value="" id="comments" style="width:200px; height: 100px">
+</p>
+	<button type="submit">Send</button>
+
+</form>
+<script type="text/javascript">
+
+	const myForm = () => {
+		const name = document.getElementById("name");
+		const comments = document.getElementById("comments");
+		const obj = {name: name.value, comments:  comments.value};
+		const jsonform = JSON.stringify(obj)
+		console.log(jsonform)
+		const jsonparse= JSON.parse(jsonform)
+		return true
+	}
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form action="dailychallenge.html" method="GET" onsubmit="return myForm()">
+		<input type="text" name="name" id="name" placeholder="John">
+		<input type="text" name="lastname" id="lastname"placeholder="Doe">
+		<button type="submit">Send</button>
+	</form>
+<script type="text/javascript">
+
+const myForm = () => {
+	let name= document.getElementById("name");
+	let lastname= document.getElementById("lastname");
+
+
+	let user = {
+		name: name.value, 
+		lastname: lastname.value
+	}
+
+	const jsonuser = JSON.stringify(user);
+	console.log(jsonuser);
+
+	// const jsonparse = JSON.parse(jsonuser)
+	return true}
+
+
+</script>
+</body>
+</html>
