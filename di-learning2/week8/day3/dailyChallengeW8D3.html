@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<label for="search">Search</label>
+		<input id="input" type="text" name="search">
+		<button type="submit" onclick="getDoc()">Go</button>
+		
+	</div>
+	
+		<div id="space"></div><br>
+		<button type="submit" onclick="clearAll()">Delete</button>
+
+<script type="text/javascript">
+	
+ function getDoc() {
+ let xhr = new XMLHttpRequest();
+let input =  document.getElementsByTagName("input")[0].value;
+
+let url ="https://api.giphy.com/v1/gifs/search?api_key=vvKKU1bKCP79BzWuM9Mo0tYCcR4h1twh&q="+ input 
+ xhr.open('GET', url);
+ xhr.send();
+ xhr.responseType = 'json'; 
+
+ xhr.onload = function() {
+	if(xhr.status != 200) {
+		console.log(`Error: ${xhr.status}: ${xht.statusText}`)
+	} else{
+console.log(xhr.response.data);
+built(xhr.response.data)
+}
+}
+
+xhr.onerror = function () {
+        console.log("Fail");
+    };
+
+   const built = (arr) => {
+   	const space = document.getElementById("space")
+   	arr.forEach((item, i) => {
+   		let div = document.createElement("div");
+   		div.setAttribute("class", "main");
+   		div.setAttribute("style","margin: 5px 5px")
+   		let parag = document.createElement("p");
+   		let img = document.createElement("ifame");
+
+
+   		parag.innerText = item.title;
+   		img.setAttribute("src", item.embed_url)
+   		img.setAttribute("frameBorder","0");
+   		div.appendChild(img);
+   		div.appendChild(parag);
+
+
+   		space.appendChild(div);
+   	})
+   }
+}
+
+
+function clearAll(){
+    document.getElementsByTagName("input")[0].value = "";
+    let results = Array.from(document.getElementsByClassName("main"));
+    results.forEach(element => element.remove())
+
+}
+
+
+</script>
+</body>
+</html>
