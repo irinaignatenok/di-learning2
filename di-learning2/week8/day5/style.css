@@ -1,0 +1,62 @@
+@font-face {
+            font-family: 'sega_logo_fontregular';
+            src: url('sega-webfont.woff2') format('woff2'),
+                url('sega-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+    width: 100%;
+    background-image: url("https://media1.giphy.com/media/FlodpfQUBSp20/giphy.gif?cid=ecf05e47baddd4dc1fb9e34006dd65eee93e0e5b85383028&rid=giphy.gif");
+     /*font-family: */
+}
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+}
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+h1 {
+     	 font-family: 'sega_logo_fontregular';
+     }
+
+#box {
+
+    border: 3px solid yellow;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border: 1px solid yellow;
+    border-radius: 5px;
+    width: 130px;
+    height: 25px;
+    font-weight: bold;
+    background-color: #DCDCDC
+}
