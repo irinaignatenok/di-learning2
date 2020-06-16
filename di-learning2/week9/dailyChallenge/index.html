@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+// Exercise 1
+
+ const compareToTen = (num) => {
+	let p = new Promise((resolve, reject) => {
+
+		if(num > 10) {
+		resolve(num + 'is greater than 10');
+
+	}  else {
+		reject(num + 'is less than error');
+	}
+	})
+	return p;
+
+}
+	
+compareToTen(15)
+.then(result => {
+	console.log(result);
+})
+.catch(err => {
+	console.log(err)
+	// second Part
+	 compareToTen(8)
+.then(result => {
+	console.log(result);
+})
+.catch(err => {
+	console.log(err)
+});
+
+
+// Exercise 2
+
+const arrayOfWords = ['cucumber', 'tomato', 'avocado']
+const complicatedArray = ['cucumber', 44, true]
+
+
+const makeAllCaps =(arr) => {
+	return new Promise((resolve,reject) => {
+	let newArray = arr.map(word => {
+		if(typeof word === 'string') {
+		return word.toUpperCase();
+	} else {
+	reject('error')
+}
+})
+resolve(newArray)
+})
+}
+
+const sortWords = (array) => {
+	return new Promise((resolve,reject) => {
+		if(array) {
+			resolve(array.sort())
+		}else {
+			reject('Error: something gets wrong')
+		}
+	})
+}
+
+console.log(makeAllCaps(complicatedArray))/*arrayOfWords*/
+	makeAllCaps(arrayOfWords) 
+	.then(result => {
+		return sortWords(result)
+	})
+	.then(result => {
+		console.log(result)
+	})
+	.catch(err=> {
+		console.log(err)
+	})
+
+
+
+
+
+</script>
+</body>
+</html>
