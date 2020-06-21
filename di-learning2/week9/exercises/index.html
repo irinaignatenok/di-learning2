@@ -5,12 +5,35 @@
 </head>
 <body>
 <script type="text/javascript">
-	// 1
+	// exercise1
+		const p = new Promise((resolve, reject)=>{
+		setTimeout(()=> {
+			resolve('success')
+		}, 400
+		)})
+p.then(res => {
+	console.log(res)
+})
+
+
+// exercise2
+
+const p = Promise.resolve(
+		setTimeout(()=> {
+			console.log('success')
+		}, 4000)
+		)
+
+
+
+
+
+	// 3
 	let status = true
 	const promise = new Promise((resolve, reject)=>{
 		setTimeout(()=> {
-			if(status) {
-		resolve()
+			if(status !== false) {
+		resolve("Succuss")
 			} else {
 				reject("Oooops something went wrong")
 			}
@@ -26,6 +49,28 @@
 	.catch(err => {
 		console.log(err)
 	})
+
+
+	// Exercise 5
+const urls = [
+  'https://swapi.dev/api/people/1/',
+  'https://swapi.dev/api/people/2/',
+  'https://swapi.dev/api/people/3/',
+  'https://swapi.dev/api/people/4/'
+]
+ Promise.all(urls.map(url => 
+ 	 fetch(url)
+ 		.then(res=> res.json())
+ ))
+.then(arr => {
+	console.log('1', arr[0])
+	console.log('1', arr[1])
+	console.log('1', arr[2])
+	console.log('1', arr[3])
+})
+.catch(err => {
+	console.log(err)
+})
 </script>
 </body>
 </html>
